@@ -16,6 +16,7 @@ apps:
       LOCPATH: "$SNAP/usr/lib/locale"
     plugs:
       - network
+      - home
 
 parts:
   newsboat:
