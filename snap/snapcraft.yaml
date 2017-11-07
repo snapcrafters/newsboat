@@ -1,0 +1,40 @@
+name: newsboat
+version: '2.10.1'
+summary: An RSS/Atom feed reader for text terminals
+description: |
+  Newsboat is a fork of Newsbeuter, an RSS/Atom feed reader for the text 
+  console. The only difference is that Newsboat is actively maintained 
+  while Newsbeuter isn't.
+
+grade: stable
+confinement: strict
+
+apps:
+  newsboat:
+    command: usr/local/bin/newsboat "$@"
+    environment:
+      LOCPATH: "$SNAP/usr/lib/locale"
+    plugs:
+      - network
+
+parts:
+  newsboat:
+    plugin: make
+    source: https://github.com/newsboat/newsboat.git
+    source-tag: 'r2.10.1'
+    build-packages: 
+      - pkg-config
+      - libsqlite3-dev
+      - libcurl4-openssl-dev
+      - libxml2-dev
+      - libstfl-dev
+      - libjson-c-dev
+      - libncursesw5-dev
+      - asciidoc
+      - libssl-dev
+      - gettext
+    stage-packages:
+      - libxml2
+      - librtmp1
+      - locales-all
+      - libcurl3
