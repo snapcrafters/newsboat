@@ -11,7 +11,15 @@ confinement: strict
 
 apps:
   newsboat:
-    command: usr/local/bin/newsboat "$@"
+    command: usr/local/bin/newsboat
+    environment:
+      LOCPATH: "$SNAP/usr/lib/locale"
+    plugs:
+      - network
+      - home
+  podboat:
+    command: usr/local/bin/podboat
+    aliases: [podboat]
     environment:
       LOCPATH: "$SNAP/usr/lib/locale"
     plugs:
