@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://avatars1.githubusercontent.com/u/29598503?v=3&s=256" alt="Project">
   <br />
-  [Project]
+  [Newsboat]
 </h1>
 
 <p align="center"><b>This is the snap for [newsboat]</b>, <i>"An RSS/Atom feed reader for the text console"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
