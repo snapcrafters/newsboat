@@ -1,5 +1,5 @@
 name: newsboat
-version: '2.10.1'
+version: '2.10.2'
 summary: An RSS/Atom feed reader for text terminals
 description: |
   Newsboat is a fork of Newsbeuter, an RSS/Atom feed reader for the text 
@@ -30,7 +30,7 @@ parts:
   newsboat:
     plugin: make
     source: https://github.com/newsboat/newsboat.git
-    source-tag: 'r2.10.1'
+    source-tag: 'r2.10.2'
     build-packages: 
       - pkg-config
       - libsqlite3-dev
